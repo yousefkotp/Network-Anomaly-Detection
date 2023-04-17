@@ -21,12 +21,12 @@ The exponential growth of network traffic has led to an increase in network anom
 For this project, we will use the ["KDD Cup 1999" dataset](https://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html?fbclid=IwAR2W62F9o8T5fllzvL-7mkA6amNjo8shdGi3QNfqCak86BEtBdLZUh-h8UI), which is a widely used benchmark dataset for network anomaly detection. This dataset contains network traffic data collected from a simulated environment, including features such as protocol type, service, source and destination IP addresses, source and destination ports, and attack types.
 
 ### Data Preprocessing
+- The dataset contains 41 features, three of which are categorical (protocol_type, service, and flag) and the rest are numerical. We will use one-hot encoding to convert the categorical features into numerical features. We will also normalize the numerical features to have zero mean and unit variance.
 
-
+- For spectral clustering, hierarchical clustering and DBSCAN, we will use only 0.00025% as the train set. The same data used in training will be also used in testing.
 
 ## Algorithms
-
-
+- We will use 4 clustering algorithms for network anomaly detection: K-mean, Spectral Clustering, Hierarchical Clustering and DBSCAN. We will use the following metrics to evaluate the model: accuracy, precision, recall, F1 score, and conditional Entropy.
 
 ### K-mean
 
@@ -41,7 +41,7 @@ For this project, we will use the ["KDD Cup 1999" dataset](https://kdd.ics.uci.e
 
 - Agglomerative hierarchical clustering starts by assigning each data point to its own cluster and then iteratively merges the two closest clusters until all the data points are in a single cluster. Divisive hierarchical clustering, on the other hand, starts with all data points in a single cluster and recursively splits it into smaller clusters until each data point is in its own cluster. This project only implements Agglomerative hierarchical clustering.
 
-- Hierarchical clustering is extremely useful when we don't know the number of clusters beforehand, unlike some other clustering algorithms. Additionally, the dendrogram can help visualize the clustering structure and can be used to identify the optimal number of clusters.
+- Hierarchical clustering is extremely useful when we want to visualize the hierarchy between points, the dendrogram can help visualize the clustering structure and can be used to identify the optimal number of clusters. However, it's worth noting that selecting the optimal number of clusters can still be a subjective and challenging task, as there may be multiple valid ways to interpret the dendrogram and the optimal number of clusters may depend on the domain of the data.
 
 - There are some potential drawbacks to hierarchical clustering. Firstly, it can be computationally expensive for large datasets, as the algorithm needs to compute a distance matrix between all pairs of data points. Secondly, the clustering results can be sensitive to the choice of distance metric and linkage method, which can significantly affect the resulting clusters. Finally, hierarchical clustering can be susceptible to the so-called chaining effect, where nearby clusters are merged into a single cluster even if they do not belong together, leading to suboptimal clustering results.
 
