@@ -61,8 +61,34 @@ Initialize k means with random values
     --> Update means by calculating the average of all items belonging to the mean's cluster
 ```
 ### Spectral Clustering
+  - Spectral clustering is an unsupervised machine learning technique that involves grouping data points into clusters based on their similarity in a high-dimensional space. This approach involves first transforming the data points into a lower-dimensional space using a spectral embedding technique, which retains the most important features of the data. Next, a clustering algorithm is applied to the transformed data points to group them into clusters.
+
+
+  - Spectral clustering has several advantages, including its ability to handle non-linearly separable data, its ability to detect clusters of different shapes and sizes, and its robustness to noise. It is commonly used in various fields, such as image segmentation, social network analysis, and bioinformatics.
+  
 
 #### Pseudocode
+```python
+def spectral_clustering(data):
+  1- Given a dataset with n data points and a desired 
+  number of clusters k
+
+  2- Construct a similarity matrix W where each element W[i,j] represents the similarity between data point i and j
+  
+  3- Construct a diagonal matrix D where D[i,i] is equal to the sum of the i-th row of the similarity matrix W
+
+  4- Compute the Laplacian matrix L = D - W
+
+  5- Compute the first k eigenvectors of the Laplacian matrix L and stack them to form a matrix V
+
+  6- Normalize the rows of the matrix V to have unit length
+
+  7- Perform k-means clustering on the rows of the normalized matrix V to obtain the final clustering result
+
+```
+
+
+
 
 
 ### Hierarchical Clustering
