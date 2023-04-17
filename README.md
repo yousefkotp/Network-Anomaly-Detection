@@ -8,11 +8,13 @@ The exponential growth of network traffic has led to an increase in network anom
     - [Data Preprocessing](#data-preprocessing)
   - [Algorithms](#algorithms)
     - [K-mean](#k-mean)
-    - [Spectral Clustering](#spectral-clustering)
-    - [Hierarchical Clustering](#hierarchical-clustering)
         - [Pseudocode](#pseudocode)
-    - [DBSCAN](#dbscan)
+    - [Spectral Clustering](#spectral-clustering)
         - [Pseudocode](#pseudocode-1)
+    - [Hierarchical Clustering](#hierarchical-clustering)
+        - [Pseudocode](#pseudocode-2)
+    - [DBSCAN](#dbscan)
+        - [Pseudocode](#pseudocode-3)
   - [Results](#results)
   - [Contributors](#contributors)
 
@@ -60,6 +62,7 @@ Initialize k means with random values
 ```
 ### Spectral Clustering
 
+#### Pseudocode
 
 
 ### Hierarchical Clustering
