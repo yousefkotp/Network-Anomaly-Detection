@@ -65,7 +65,8 @@ Initialize k means with random values
 
 
   - Spectral clustering has several advantages, including its ability to handle non-linearly separable data, its ability to detect clusters of different shapes and sizes, and its robustness to noise. It is commonly used in various fields, such as image segmentation, social network analysis, and bioinformatics.
-  
+
+  - Furthermore, the performance of spectral clustering largely depends on the selection of appropriate parameters, such as the similarity measure, the number of clusters, and the spectral embedding technique. Therefore, careful parameter tuning is necessary for achieving optimal clustering results. Despite its advantages and wide applicability, spectral clustering may not be suitable for datasets with extremely large numbers of data points, as it involves computing the eigenvectors of the Laplacian matrix, which can be computationally expensive.
 
 #### Pseudocode
 ```python
